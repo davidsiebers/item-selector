@@ -1,0 +1,10 @@
+<div class="item-selector">
+    @let selectorFolders = selectorFoldersTree$ | async;
+    @if(selectorFolders !== null) {
+        @for (selectorFolder of selectorFolders; track selectorFolder.id) {
+            <selector-list-folder [listFolder]="selectorFolder"></selector-list-folder>
+        }
+    } @else {
+        <span>No selectable items available</span>
+    }
+</div>

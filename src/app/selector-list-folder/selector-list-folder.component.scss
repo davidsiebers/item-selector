@@ -1,0 +1,49 @@
+.selector-list-entry {
+    list-style: none;
+    position: relative;
+
+    .selector-list-row {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        padding-bottom: 8px;
+        padding-right: 16px;
+        padding-top: 8px;
+
+        &:hover {
+            background-color: hsl(0, 0%, 96%);
+        }
+
+        input {
+            cursor: pointer;
+        }
+        
+        label {
+            cursor: pointer;
+            font-weight: bold;
+            margin-left: 8px;
+            vertical-align: text-bottom;
+        }
+
+        custom-button {
+            margin-left: auto;
+            transition: transform 0.25s ease-in;
+        }
+    }
+
+    > selector-list-folder,
+    > selector-list-item {
+        display: none;
+    }
+
+    &.open {
+        > selector-list-folder,
+        > selector-list-item {
+            display: block;
+        }
+
+        > .selector-list-row custom-button {
+            transform: rotate(-180deg);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    color: hsl(195, 3%, 24%);
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item-selector {
+    .selector-list-entry .selector-list-row {
+        padding-left: 16px;
+    }
+
+    .selector-list-entry .selector-list-entry .selector-list-row {
+        padding-left: 32px;
+    }
+
+    .selector-list-entry .selector-list-entry .selector-list-entry .selector-list-row {
+        padding-left: 48px;
+    }
+
+    .selector-list-entry .selector-list-entry .selector-list-entry .selector-list-entry .selector-list-row {
+        padding-left: 64px;
+    }
+}

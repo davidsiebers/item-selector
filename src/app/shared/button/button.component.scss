@@ -1,0 +1,24 @@
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:not(.icon-only) {
+        align-items: center;
+        background-color: hsl(213, 97%, 53%);
+        border-radius: 3px;
+        color: #fff;
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    &.icon-only {
+        background-color: transparent;
+
+        img {
+            height: 16px;
+            vertical-align: top;
+            width: 16px;
+        }
+    }
+}

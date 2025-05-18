@@ -1,0 +1,19 @@
+<div class="selector-list-entry open">
+    <div class="selector-list-row" (click)="selectItem($event)">
+        <input type="checkbox" [checked]="listFolder.checked" [indeterminate]="listFolder.indeterminate" (click)="$event.stopPropagation()" [id]="listFolder.id" [name]="listFolder.id" [value]="listFolder.title">
+        <label [for]="listFolder.id">
+            {{ listFolder.title }}
+        </label>
+        <custom-button (click)="toggleFolder($event)" [icon]="'icon-arrow-down'" [showAsIcon]="true"></custom-button>
+    </div>
+    @if (listFolder.children) {
+        @for (childFolder of listFolder.children; track childFolder.id) {
+            <selector-list-folder [listFolder]="childFolder"></selector-list-folder>
+        }
+    }
+    @if (listFolder.items) {
+        @for (item of listFolder.items; track item.id) {
+            <selector-list-item [listItem]="item"></selector-list-item>
+        }
+    }
+</div>

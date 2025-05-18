@@ -1,0 +1,12 @@
+<div class="filters">
+    <item-selector></item-selector>
+    <p>
+        @let selectedItemIDs = selectedItemIDs$ | async;
+        @if (selectedItemIDs !== null && selectedItemIDs.length > 0) {
+            Selected item IDs: {{ selectedItemIDs }}
+        } @else {
+            There are no item IDs selected
+        }
+    </p>
+    <custom-button [label]="'Clear selection'" (click)="clearSelection()"></custom-button>
+</div>

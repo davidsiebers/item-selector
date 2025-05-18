@@ -1,0 +1,9 @@
+<button [class]="showAsIcon ? 'icon-only' : ''">
+    @if (label !== '') {
+        {{ label }}
+    }
+
+    @if (icon !== '') {
+        <img [src]="'../../../../assets/' + icon + '.svg'" alt="Icon" width="12" height="12" />
+    }
+</button>

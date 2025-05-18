@@ -1,0 +1,20 @@
+.selector-list-row {
+    cursor: pointer;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    padding-top: 8px;
+
+    &:hover {
+        background-color: hsl(0, 0%, 96%);
+    }
+
+    input {
+        cursor: pointer;
+    }
+
+    label {
+        cursor: pointer;
+        margin-left: 8px;
+        vertical-align: text-bottom;
+    }
+}
